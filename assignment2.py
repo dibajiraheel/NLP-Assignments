@@ -8,7 +8,6 @@ def ExtractDrugNames(text):
     import re
     from nltk.corpus import stopwords
     from nltk.stem import WordNetLemmatizer
-    from enchant import Dict
     
     regular_punc = list(string.punctuation) # python punctuations 
     special_punc = ['©', '^', '®','¾', '¡','!','≥','±','→∞'] # user defined special characters to remove 
@@ -124,9 +123,6 @@ def ExtractDrugNames(text):
             continue
         
         elif drug in words:
-            continue
-        
-        elif dictionary.check(drug):
             continue
         
         elif drug == 'mg':
