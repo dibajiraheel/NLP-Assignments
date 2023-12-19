@@ -7,6 +7,7 @@ def ExtractDrugNames(text):
     import nltk
     import re
     from nltk.corpus import stopwords
+    nltk.download('stopwords')
     from nltk.stem import WordNetLemmatizer
     
     regular_punc = list(string.punctuation) # python punctuations 
