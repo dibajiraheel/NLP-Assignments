@@ -23,12 +23,9 @@ def ExtractDrugNames(text):
     for i in range(0,5000):
         words.append(str(i))
     words = set(words)
-
-    # Load the English dictionary
-    dictionary = Dict("en_US")
     
     
-    def remove_punctuation(text,punc_list):
+    def remove_punctuation(text,pun)c_list):
         for punc in punc_list:
             if punc == '-' or punc == '~' :
                 text = text.replace(punc,' ')
